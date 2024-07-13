@@ -1,0 +1,155 @@
+/* Root */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Adding Fonts */
+@font-face {
+    font-family: heading;
+    src: url("../fonts/Mukta-Medium.ttf");
+}
+
+@font-face {
+    font-family: textContent;
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+/* Body */
+body {
+    background-color: #212529;
+    color: #fefefe;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-family: heading, sans-serif;
+    font-size: 2.8rem;
+}
+
+/* NavBar */
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NavBar Row 1 */
+.nav-row-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.new-array-div {
+    width: 50%;
+    text-align: right;
+}
+
+.new-array-btn {
+    padding: 2.2rem 1rem 2.2rem 1rem;
+    font-family: textContent, sans-serif;
+    font-size: 1rem;
+    background-color: #212529;
+    color:#0075ff;
+    border: 2px solid#0075ff;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.new-array-btn:disabled {
+    color:#0077ff89;
+    border: 2px solid#0077ff89;
+    cursor: not-allowed;
+}
+
+.new-array-btn:hover {
+    background-color:#0075ff;
+    color: #fefefe;
+}
+
+.new-array-btn:hover:disabled {
+    background-color:#0077ff89;
+    color: #fefefeb1;
+    cursor: not-allowed;
+}
+
+.input-div {
+    padding: 0.8rem;
+    width: 50%;
+    text-align: left;
+    font-family: textContent,sans-serif;
+    font-size: 1.2rem;
+}
+
+/* NavBar Row 2 */
+.nav-row-2 {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem;
+    font-family: textContent, sans-serif;
+    font-size: 1rem;
+    background-color: #212529;
+    color: #f68104;
+    border: 2px solid #f68104;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    color: #f68104a1;
+    border: 2px solid #f68104a1;
+    cursor: not-allowed;
+}
+
+.btn:hover {
+    background-color:#f68104;
+    color: #fefefe;
+}
+
+.btn:hover:disabled {
+    background-color:#f68104a1;
+    color: #fefefeb1;
+    cursor: not-allowed;
+}
+
+/* Sorting Bars */
+.flex-container{
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 98%;
+    height: 420px;
+    transition: 2s all ease;
+}
+
+.flex-item{
+    background: rgb(146, 255, 255);
+    border: 1pt solid black;
+    width: 10px;
+    transition: 0.1s all ease;
+}
+
+/* Responsiveness for Tablets and Mobile Phones */
+@media only screen and (max-width: 768px) {
+    .nav-row-2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .btn {
+        display: block;
+        width: 50%;
+    }
+}
