@@ -5,6 +5,12 @@ function disableSortingBtn() {
     document.querySelector(".insertion-sort").disabled = true;
     document.querySelector(".quick-sort").disabled = true;
     document.querySelector(".merge-sort").disabled = true;
+
+    document.querySelector(".counting-sort").disabled = true;
+    document.querySelector(".heap-sort").disabled = true;
+    document.querySelector(".shell-sort").disabled = true;
+    document.querySelector(".radix-sort").disabled = true;
+    document.querySelector(".intro-sort").disabled = true;
 }
 
 // Enable Sorting Button Function
@@ -14,6 +20,12 @@ function enableSortingBtn() {
     document.querySelector(".insertion-sort").disabled = false;
     document.querySelector(".quick-sort").disabled = false;
     document.querySelector(".merge-sort").disabled = false;
+
+    document.querySelector(".counting-sort").disabled = false;
+    document.querySelector(".heap-sort").disabled = false;
+    document.querySelector(".shell-sort").disabled = false;
+    document.querySelector(".radix-sort").disabled = false;
+    document.querySelector(".intro-sort").disabled = false;
 }
 
 // Disable Size Slider Function
@@ -45,7 +57,6 @@ function animationWait(millisec) {
 
 // Function to swap elements i.e. bars
 function swap(el1, el2) {
-    // console.log("swapping");
     let temp = el1.style.height;
     el1.style.height = el2.style.height;
     el2.style.height = temp;
@@ -69,7 +80,6 @@ function createNewArray(noOfBars = 75) {
         array.push(Math.floor(Math.random() * 210) + 1);
     }
 
-    // console.log(array);
     const bars = document.querySelector("#bars");
 
     for(let i = 0; i < noOfBars; i++) {
@@ -90,10 +100,8 @@ let arraySize = document.querySelector("#array-size");
 
 // Creating New Array using Slider
 arraySize.addEventListener('input', function() {
-    // console.log(arraySize.value, typeof(arraySize.value));
     createNewArray(parseInt(arraySize.value));
 });
-
 
 // Default Delay for 260ms
 let delay = 260;
@@ -101,7 +109,6 @@ let delayElement = document.querySelector("#sorting-speed");
 
 // Adjusting Sorting Speed
 delayElement.addEventListener('input', function() {
-    // console.log(delayElement.value, typeof(delayElement.value));
     delay = 320 - parseInt(delayElement.value);
 });
 
